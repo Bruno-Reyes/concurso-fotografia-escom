@@ -7,10 +7,6 @@ import { InputTextarea } from "primereact/inputtextarea";
 import { Toast } from "primereact/toast";
 import {
   FileUpload,
-  FileUploadHeaderTemplateOptions,
-  FileUploadSelectEvent,
-  FileUploadUploadEvent,
-  ItemTemplateOptions,
 } from "primereact/fileupload";
 import { ProgressBar } from "primereact/progressbar";
 import { Tooltip } from "primereact/tooltip";
@@ -42,9 +38,9 @@ const UploadImage = () => {
 
   const [description, setDescription] = useState("");
 
-  const toast = useRef<Toast>(null);
+  const toast = useRef(null);
   const [totalSize, setTotalSize] = useState(0);
-  const fileUploadRef = useRef<FileUpload>(null);
+  const fileUploadRef = useRef(null);
   const [file, setFile] = useState(null);
 
   const showMessage = (message, type) => {
