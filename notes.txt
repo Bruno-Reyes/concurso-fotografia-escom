@@ -1,0 +1,6 @@
+Para actualizar 
+
+npm run build
+
+firebase deploy 
+

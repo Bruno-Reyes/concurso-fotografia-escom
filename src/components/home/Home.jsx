@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card } from "primereact/card";
 import { Galleria } from "primereact/galleria";
 import { getData } from "../../firebase/config";
+import { Fieldset } from "primereact/fieldset";
 import "./HomePage.css"; // Asegúrate de importar el archivo CSS
 
 const HomePage = () => {
@@ -18,7 +19,7 @@ const HomePage = () => {
   }, []);
 
   const header = (
-    <div className="p-grid p-justify-center p-align-center">
+    <div className="p-grid p-justify-center p-align-center my-4 shadow-8">
       <div className="p-col-12 p-md-8 p-lg-6">
         <Card
           title="Concurso de Fotografía ESCOM 2024"
@@ -28,15 +29,6 @@ const HomePage = () => {
             Participa en nuestro emocionante concurso de fotografía y muestra tu
             talento.
           </p>
-        </Card>
-      </div>
-    </div>
-  );
-
-  const rules = (
-    <div className="p-grid p-justify-center p-align-center p-mt-4">
-      <div className="p-col-12 p-md-10">
-        <Card title="Reglas del Concurso">
           <ul>
             <li>La participación es gratuita.</li>
             <li>Cada participante puede enviar fotos sin límite.</li>
@@ -48,6 +40,7 @@ const HomePage = () => {
               La fecha límite para enviar las fotos es el 21 de Junio de 2024.
             </li>
           </ul>
+          <p></p>
         </Card>
       </div>
     </div>
@@ -98,7 +91,6 @@ const HomePage = () => {
     <div className="flex flex-column align-items-center justify-content-center">
       {header}
 
-      {rules}
       {gallery}
     </div>
   );
